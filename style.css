@@ -20,3 +20,6 @@ nav>a:hover{
     background: rgba(255,255,255,.9);
     color: slategrey;
 }
+#mainContent{
+    margin: auto;
+}

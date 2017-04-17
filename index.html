@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<html ng-app="testeApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!-- CSS -->
-    <!-- load bootstrap (bootswatch version) -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- JS -->
-    <!-- load angular, ngRoute, ngAnimate -->
+    
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="mainController">
     <header>
         <div class="container">
             <div class="header-left">
@@ -24,15 +21,17 @@
             <div class="header-right">
                 <nav>
                     <a href="#">Sobre</a>
-                    <a href="#">Biografia</a>
-                    <a href="#">Ligações</a>
-                    <a href="#">Contacto</a>
+                    <a href="#about">Biografia</a>
+                    <a href="#links">Ligações</a>
+                    <a href="#contact">Contacto</a>
                 </nav>
             </div>
         </div>
     </header>
-    <section class="content">
-        
-    </section>
+        <div id="mainContent">
+            <div ng-view>
+
+            </div>
+        </div>
 </body>
 </html>
